@@ -6,7 +6,37 @@
   </head>
 
   <body>
-    <h1 id="header">Tic Tac Toe!</h1>
+    <div class="main">
+      <h1 id="header">Tic Tac Toe</h1>
+
+      <!-- Board goes here, above the controls -->
+      <div class="game"></div>
+
+      <div class="controls-div">
+        <h2 class="instructions-text"></h2>
+        <div class="buttons">
+          <button class="replay-btn">Replay</button>
+          <button class="end-btn">End Game</button>
+        </div>
+      </div>
+
+      <div class="scores-div">
+        <div class="player-score">
+          <p>X</p>
+          <p class="player-x-score">0</p>
+        </div>
+
+        <div class="player-score">
+          <p>O</p>
+          <p class="player-o-score">0</p>
+        </div>
+      </div>
+
+      <button class="restart-btn" onClick="window.location.reload();">
+        Restart
+      </button>
+    </div>
+
     <!-- Import program logic -->
     <script src="script.js"></script>
   </body>
