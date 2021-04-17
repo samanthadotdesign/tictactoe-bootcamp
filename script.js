@@ -161,19 +161,12 @@ const squareClick = (row, column) => {
       playerOCols.push(column);
       console.log("playerOCols ", playerOCols);
       if (
-        playerXRows.length >= board.length ||
-        playerXCols.length >= board.length
+        playerORows.length >= board.length ||
+        playerOCols.length >= board.length
       ) {
         checkWin(playerORows, playerOCols, currentPlayer);
       }
     }
-
-    // Since currentPlayer is a global variable that can be accessed here
-    // check win is related to the currentPlayer
-    // checkWin(currentPlayer, row, column);
-
-    // refresh the creen with a new board
-    // according to the array that was just changed
     buildBoard(board);
     togglePlayer();
   }
